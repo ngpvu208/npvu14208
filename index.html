@@ -1,50 +1,137 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Giới thiệu bản thân - Phi Vũ</title>
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Giới thiệu bản thân</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+        color: white;
+        text-align: center;
+        overflow-x: hidden;
     }
-    .card {
-      background: white;
-      width: 380px;
-      padding: 24px;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      text-align: center;
+
+    /* Avatar */
+    .avatar {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #38bdf8;
+        box-shadow: 0 0 20px #38bdf8;
+        animation: glow 4s infinite;
+        margin-top: 50px;
     }
-    img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 16px;
+
+    @keyframes glow {
+        0% { box-shadow: 0 0 15px #38bdf8; }
+        50% { box-shadow: 0 0 30px #38bdf8; }
+        100% { box-shadow: 0 0 15px #38bdf8; }
     }
+
     h1 {
-      margin: 0;
-      font-size: 28px;
+        font-size: 35px;
+        margin-top: 20px;
+        animation: fadeIn 1.5s ease;
     }
+
     p {
-      font-size: 16px;
-      color: #444;
+        width: 70%;
+        margin: auto;
+        font-size: 18px;
+        opacity: 0.9;
     }
-  </style>
+
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(15px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Khung liên kết */
+    .social-links {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .friend-box {
+        background: #1e293b;
+        padding: 15px 25px;
+        border-radius: 12px;
+        transition: 0.3s;
+        border: 1px solid #334155;
+    }
+
+    .friend-box:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 0 20px #38bdf8;
+    }
+
+    .friend-box img {
+        width: 40px;
+    }
+
+    /* Nút quay về trang chủ */
+    .home-btn {
+        display: inline-block;
+        margin-top: 50px;
+        padding: 12px 30px;
+        background: #38bdf8;
+        color: black;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: 0.3s;
+    }
+
+    .home-btn:hover {
+        background: white;
+        box-shadow: 0 0 20px #38bdf8;
+    }
+</style>
 </head>
+
 <body>
-  <div class="card">
-    <img src="gen-n-z7285700291720_fca5d52e1f01e90eef4a685d474c81f8.jpg" alt="Avatar Phi Vũ" />
-    <h1>Phi Vũ</h1>
-    <p><strong>Sở thích:</strong> Chơi game, nghe nhạc, ngủ</p>
-  </div>
+
+    <!-- Avatar -->
+    <img src="gen-n-z7285700291720_fca5d52e1f01e90eef4a685d474c81f8 (1).jpg" class="avatar" alt="Avatar">
+
+    <h1>Xin chào, tôi là Danh!</h1>
+    <p>
+        Đây là trang web giới thiệu bản thân của mình.  
+        Mình thích lập trình, thiết kế web và học những thứ mới mỗi ngày.  
+        Cảm ơn bạn đã ghé thăm!
+    </p>
+
+    <h2>Kết nối bạn bè Facebook</h2>
+
+    <!-- Liên kết bạn bè -->
+    <div class="social-links">
+        <a class="friend-box" href="https://www.facebook.com/share/16HpANbhqD/" target="_blank">
+            <img src="image.png" alt="Facebook">
+        </a>
+
+        <a class="friend-box" href="https://www.facebook.com/share/17aXHhnQo4/" target="_blank">
+            <img src="image.png" alt="Facebook">
+        </a>
+
+        <a class="friend-box" href="https://www.facebook.com/share/1YK7FxMyJX/" target="_blank">
+            <img src="image.png" alt="Facebook">
+        </a>
+    </div>
+
+    <!-- Nút về trang chủ -->
+    <a class="home-btn" href="https://vothanhdanh5890-beep.github.io/thanhdanh0gay.github.io/">
+        ⬅ Quay về Trang Chủ
+    </a>
+
 </body>
 </html>
